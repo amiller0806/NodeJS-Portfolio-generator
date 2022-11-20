@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-portfolio-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amiller0806/NodeJS-Portfolio-generator.git"
+  },
+  "author": "amiller0806",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amiller0806/NodeJS-Portfolio-generator/issues"
+  },
+  "homepage": "https://github.com/amiller0806/NodeJS-Portfolio-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
