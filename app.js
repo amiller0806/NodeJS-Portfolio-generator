@@ -5,30 +5,59 @@ const promptUser = () => {
     {
       type: "input",
       name: "name",
-      message: "What is your name?",
+      message: "What is your name? (Required)",
+      // Notice that the validate method receives an argument. 
+      // This argument is the user's input, nameInput.
+      validate: nameInput => {
+        if (nameInput) {
+          return true;
+        }else{
+          console.log('Please enter your name!');
+          return false;
+        }
+      }
     },
 
     {
       type: "input",
       name: "github",
-      message: "Enter your Github Username",
+      message: "Enter your Github Username (Required)",
+      validate: githubInput => {
+        if (githubInput) {
+          return true;
+        }else{
+          console.log('Please enter your Github Username!');
+          return false;
+        }
+      }
     },
+{    type: "confirm",
+      name: "confirmAbout",
+      message: 'Would you like to enter some information about yourself for an "About" section?',
+      default: true
+
+  },
 
     {
       type: "input",
       name: "about",
       message: "Provide some information about yourself:",
-    },
+      // You've used the when method to conditionally prompt a question based on the user's input.
+
+
+      when: ({confirmAbout }) => confirmAbout
+
+        }
   ]);
-};
+    };
 // added the projects array to the portfolioData object and initialized it as an empty array
 const promptProject = (portfolioData) => {
   console.log(`
   ===================
   Add a New Project 
   ====================
-
   `);
+   // If there's no 'projects' array property, create one
 
   if (!portfolioData.projects) {
     portfolioData.projects = [];
@@ -39,12 +68,27 @@ const promptProject = (portfolioData) => {
       {
         type: "input",
         name: "name",
-        message: "What is the name of your project?",
+        message: "What is the name of your project? (Required)",
+        validate: projectNameInput => {
+          if (projectNameInput) {
+            return true;
+          }else{
+            console.log('Please enter your Project Name!');
+          }
+        }
+
       },
       {
         type: "input",
         name: "description",
         message: "Provide a description of the project (Required)",
+        validate: projectDescriptionInput => {
+          if (projectDescriptionInput) {
+            return true;
+          }else{
+            console.log('Please enter your Project description!');
+          }
+        }
       },
 
       {
@@ -65,6 +109,14 @@ const promptProject = (portfolioData) => {
         type: "input",
         name: "link",
         message: "Enter the Github name of your project?. (Required)",
+        validate: projectLink => {
+          if (projectLink) {
+            return true;
+          }else{
+            console.log('Please enter your Project link!');
+            return false;
+          }
+        }
       },
       {
         type: "confirm",
