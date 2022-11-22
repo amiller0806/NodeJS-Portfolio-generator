@@ -1,0 +1,26 @@
+
+
+
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../Module 9 Files/9.2"
+		},
+		{
+			"path": "../../Curriculum/CU-VIRT-BO-FSF-PT-07-2022-U-B/09-NodeJS/05-Module-Project/lesson-files/9.3"
+		},
+		{
+			"path": "../../Curriculum/CU-VIRT-BO-FSF-PT-07-2022-U-B/09-NodeJS/05-Module-Project/lesson-files/9.4"
+		},
+		{
+			"path": "../../Curriculum/CU-VIRT-BO-FSF-PT-07-2022-U-B/09-NodeJS/05-Module-Project/lesson-files/9.5"
+		}
+	],
+	"settings": {
+		"php.validate.executablePath": ""
+	}
+}
+
